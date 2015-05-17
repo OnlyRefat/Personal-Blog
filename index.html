@@ -8,6 +8,8 @@
     <script data-require="angular.js@*" data-semver="1.3.0-beta.5" src="https://code.angularjs.org/1.3.0-beta.5/angular.js"></script>
     <script data-require="angular-animate@*" data-semver="1.2.16" src="http://code.angularjs.org/1.2.16/angular-animate.js"></script>
     <script data-require="angular-route@*" data-semver="1.2.16" src="http://code.angularjs.org/1.2.16/angular-route.js"></script>
+    <script type="text/javascript" src="http://www.google.com/jsapi?ext.js"></script>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -15,11 +17,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
     <script src="js/script.js"></script>
+    <script src="js/directive/GGraph.js"></script>
     <script src="js/controller/Mobile.js"></script>    
     <script src="js/controller/Menu.js"></script>
     <script src="js/controller/First.js"></script>
     <script src="js/controller/Experience.js"></script>
     <script src="js/controller/Profile.js"></script>
+    <script src="js/controller/Skill.js"></script>
   </head>
 
   <body>
@@ -35,7 +39,7 @@
                   </button>
                   <a class="navbar-brand" href="#">Menu</a>
               </div>
-                    <ul ng-show="showMenu" class="list-group">
+                    <ul ng-show="showMenu" class="list-group" >
                     <li ng-class="{active:menuNumber=='menu1'}" >
                         <a href="#profile" ng-click='menuNumber="menu1"' class="list-group-item" style="background-color:black"><span class="fa fa-home solo">Profile</span></a>
                     </li>

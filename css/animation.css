@@ -30,3 +30,20 @@
   left:0;
   opacity:0;
 }
+
+
+.show-fade.ng-show-add, .show-fade.ng-show-remove {
+  -webkit-transition:all linear 1s;
+  -moz-transition:all linear 1s;
+  -o-transition:all linear 1s;
+  transition:all linear 1s;
+  display:block!important;
+}
+.show-fade.ng-show-add.ng-show-add-active,
+.show-fade.ng-show-remove {
+  opacity:0;
+}
+.show-fade.ng-show-add,
+.show-fade.ng-show-remove.ng-show-remove-active {
+  opacity:1;
+}
