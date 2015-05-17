@@ -1,0 +1,71 @@
+<div ng-controller="experienceCtrl">
+
+    <div class="jumbotron text-center" >
+         <h1>Experience</h1> 
+         <p class="text-primary">“Protons give an atom its identity, electrons its personality.”
+- Bill Bryson, A short history of nearly everything</p>             
+    </div>
+    <div class="row">
+	<div class="col-md-9 col-md-offset-1">  <h3 class="text-primary" >{{Hello}}</h3> </div>
+	</div>
+	
+	<div class="row">
+			<div class="col-md-9 col-md-offset-1">
+		<div class="tabbable tabs-left">
+				<ul class="nav nav-tabs ">
+					<li  ng-class="{active:Tabnumber=='tab1'}"><a ng-click='Tabnumber="tab1"' >SSC</a></li>
+					<li ng-class="{active:Tabnumber=='tab2'}"><a ng-click='Tabnumber="tab2"' >Inter</a></li>
+					<li ng-class="{active:Tabnumber=='tab3'}"><a ng-click='Tabnumber="tab3"' >Graduation</a></li>
+				</ul>
+				<div class="tab-content">
+					<div ng-switch="Tabnumber">
+						<div ng-switch-when="tab1">
+							<table  class="table table-bordered">
+									  <tr ng-repeat="info in sscinformation">
+									    <td>{{info.title}}</td>
+									    <td>{{info.content}}</td>
+									  </tr>
+							</table> 
+						</div>
+						<div ng-switch-when="tab2">
+							<table  class="table table-bordered">
+									  <tr ng-repeat="info in hscinformation">
+									    <td>{{info.title}}</td>
+									    <td>{{info.content}}</td>
+									  </tr>
+							</table>							
+						</div>
+
+						<div ng-switch-when="tab3">
+							<table  class="table table-bordered">
+									  <tr ng-repeat="info in varsityinformation">
+									    <td>{{info.title}}</td>
+									    <td>{{info.content}}</td>
+									  </tr>
+							</table>		
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+			
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-xs-9 col-md-offset-1">
+			<div><h3 class="text-primary">Career</h3></div>
+			<table  class="table table-bordered">
+			<tr ng-repeat="info in careerInfo">
+					<td>{{info.title}}</td>
+					<td>{{info.content}}</td>
+				</tr>
+			</table>	
+
+		</div>
+		
+	</div>
+
+	
+</div>
