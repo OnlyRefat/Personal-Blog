@@ -2,74 +2,72 @@
 
 
 
-<div class="row">
+  <div class="row">
 
-	  <div class=" text-center">
-    	 <h1 class="text-primary">Projects</h1> 
-         <h3 class="text-primary">“You can do anything you set your mind to.”
-- Benjamin Franklin</h3>
-    <div class="divider" style="margin-bottom:25px; margin-left:5px; margin-right:5px; margin-top:25px; width:100%"></div>
+   <div class=" text-center">
+    <h1 class="text-primary">Projects</h1> 
+    <h3 class="text-primary">“You can do anything you set your mind to.”
+      - Benjamin Franklin</h3>
+      <div class="divider" style="margin-bottom:25px; margin-left:5px; margin-right:5px; margin-top:25px; width:100%"></div>
     </div>
+  </div>
 
-  <div class="col-sm-6 col-md-4">
+  <div class="row">
+   <div class="col-sm-6 col-md-4" ng-repeat="pro in project">
     <div class="thumbnail">
-      <img style="height:30vh; width:50vh" src="image/2.jpg" >
+      <img style="height:30vh; width:50vh" ng-src="{{pro.image[0]}}" >
       <div class="divider" style="width:100%"></div>
       <div class="caption">
-        <h3>First Project</h3>
-        <p>The project is done with the latest technologies. I have used angularjs for front end and  </p>
-        <p><a href="#" class="btn btn-primary" role="button">Project</a> <a href="#" class="btn btn-default" role="button">Details</a></p>
-      </div>
-    </div>
-  </div>
+        <h3>{{pro.name}}</h3>
+        <p>{{pro.details}}</p>
+        <p><a href="#" class="btn btn-primary" role="button">Project</a><button ng-click="toggleModal($index)" class="btn btn-default">Details</button></p>
 
-    <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img style="height:30vh; width:50vh" src="image/3.jpg" >
-      <div class="divider" style="width:100%"></div>
-      <div class="caption">
-        <h3>Second Project</h3>
-        <p>The project is done with the latest technologies. I have used angularjs for front end and  </p>
-        <p><a href="#" class="btn btn-primary" role="button">Project</a> <a href="#" class="btn btn-default" role="button">Details</a></p>
       </div>
     </div>
   </div>
+  <modal title="App Snapshot" visible="showModal" >
 
-    <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img style="height:30vh; width:50vh" src="image/4.jpg" >
-      <div class="divider" style="width:100%"></div>
-      <div class="caption">
-        <h3>Third Project</h3>
-        <p>The project is done with the latest technologies. I have used angularjs for front end and  </p>
-        <p><a href="#" class="btn btn-primary" role="button">Project</a> <a href="#" class="btn btn-default" role="button">Details</a></p>
-      </div>
-    </div>
-  </div>
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
 
-    <div class="col-sm-6 col-md-4">
-    <div class="thumbnail" >
-      <img style="height:30vh; width:50vh" src="image/5.jpg" >
-      <div class="divider" style="width:100%"></div>
-      <div class="caption">
-        <h3>Fourth Project</h3>
-        <p>The project is done with the latest technologies. I have used angularjs for front end and  </p>
-        <p><a href="#" class="btn btn-primary" role="button">Project</a> <a href="#" class="btn btn-default" role="button">Details</a></p>
-      </div>
-    </div>
-  </div>
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner text-center" role="listbox">
 
-    <div class="col-sm-6 col-md-4" >
-    <div class="thumbnail">
-      <img style="height:30vh; width:50vh" src="image/6.jpg">
-      <div class="divider" style="width:100%"></div>
-      <div class="caption">
-        <h3>Fifth  Project</h3>
-        <p>The project is done with the latest technologies. I have used angularjs for frontend and Sailsjs for backend </p>
-        <p><a href="#" class="btn btn-primary" role="button">Project</a> <a href="#" class="btn btn-default" role="button">Details</a></p>
+        <div class="item active " style="margin-left:30%" >
+          <img ng-src="{{project[selected].image[0]}}">
+        </div>
+        <div class="item" style="margin-left:30%">
+          <img ng-src="{{project[selected].image[1]}}" >
+        </div>
+
+        <div class="item" style="margin-left:30%">
+          <img ng-src="{{project[selected].image[2]}}" >
+        </div>
+
       </div>
+
+
+
+      <!-- Controls -->
+      <Button class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </Button>
+      <Button class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </Button>
     </div>
-  </div>
+
+  </modal>
+
+  
 </div>
+
   
 </div>
