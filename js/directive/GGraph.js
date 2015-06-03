@@ -48,4 +48,23 @@ app.directive('gChart', function() {
         });
       }
     };
-  });
+  })
+
+.directive('myStyle', function ()
+{
+  return {
+    restrict: 'A',
+    link: function (scope, element, attrs)
+    {
+      element.bind('mouseenter', function ()
+      {
+       element.css("box-shadow", "10px 10px 5px #888888");
+     });
+      element.bind('mouseleave', function ()
+      {
+        
+        element.css("box-shadow","none");
+      });
+    }
+  }
+});
